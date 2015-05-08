@@ -1,30 +1,30 @@
 #Squares
 
-## Node
-### Properties:
+### Node
+#### Properties:
 - x (Number)
 - y (Number)
 
-## ObstacleNode (extends Node)
-### Properties:
+### ObstacleNode (extends Node)
+#### Properties:
 - obstacle (Obstacle)
--- Description: [optional], the obstacle that this node is tied to
+	- Description: [optional], the obstacle that this node is tied to
 
-## PathManager
-### Methods:
+### PathManager
+#### Methods:
 - findNextPointInPath(Block)
--- Description: Uses the blocks position and destination to determine the path. Calls this.findShortestPath()
--- Returns: (ObstacleNode): The next node to travel to
+	- Description: Uses the blocks position and destination to determine the path. Calls this.findShortestPath()
+	- Returns: (ObstacleNode): The next node to travel to
 
-## TrafficManager
-### Methods:
+### TrafficManager
+#### Methods:
 - blockMove(Block)
--- Description: when a block moves: (for curBlock in blocks)
---- notifies the block if it is about to collide with curBlock (tell it the block it is about to collide with) aboutToCollideWith(curBlock)
---- if curBlock.moveToBlock is the block that is moving,  then tell the block to ask for a new path
+	- Description: when a block moves: (for curBlock in blocks)
+		- notifies the block if it is about to collide with curBlock (tell it the block it is about to collide with) aboutToCollideWith(curBlock)
+		- if curBlock.moveToBlock is the block that is moving,  then tell the block to ask for a new path
 
-## Obstacle
-### Properties:
+### Obstacle
+#### Properties:
 - left (Number)
 - top (Number)
 - right (Number)
@@ -32,20 +32,20 @@
 - width (Number)
 - height (Number)
 
-## Block (extends Obstacle)
-### Description:
+### Block (extends Obstacle)
+#### Description:
 - Knows its current position, destination, next point (and object)
-### Properties:
+#### Properties:
 - position (Node)
--- Description: The coordinates of the center of the block
+	- Description: The coordinates of the center of the block
 - destination (Node)
 - travelToPoint (Node)
 - travelToObstacle (Obstacle) 
-### Methods:
+#### Methods:
 - askForNextPoint()
--- Description: calls pathManager.findNextPointInPath(this), updates travelToPoint/travelToObstacle if they change.
+	- Description: calls pathManager.findNextPointInPath(this), updates travelToPoint/travelToObstacle if they change.
 - updatePosition()
--- Description: Notifies trafficManager when it moves (every step)
+	- Description: Notifies trafficManager when it moves (every step)
 - aboutToCollideWith(Block)
  
 
