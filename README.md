@@ -48,12 +48,14 @@
 ### Block (extends Obstacle)
 #### Description:
 - Knows its current position, destination, next point (and object)
+
 #### Properties:
 - position (Node)
 	- Description: The coordinates of the center of the block
 - destination (Node)
 - travelToPoint (Node)
-- travelToObstacle (Obstacle) 
+- travelToObstacle (Obstacle)
+
 #### Methods:
 - askForNextPoint()
 	- Description: calls pathManager.findNextPointInPath(this), updates travelToPoint/travelToObstacle if they change.
