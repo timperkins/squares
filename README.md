@@ -1,14 +1,21 @@
 #Squares
 
+---
+
 ### Node
 #### Properties:
 - x (Number)
 - y (Number)
 
+---
+
+
 ### ObstacleNode (extends Node)
 #### Properties:
 - obstacle (Obstacle)
 	- Description: [optional], the obstacle that this node is tied to
+
+---
 
 ### PathManager
 #### Methods:
@@ -16,12 +23,16 @@
 	- Description: Uses the blocks position and destination to determine the path. Calls this.findShortestPath()
 	- Returns: (ObstacleNode): The next node to travel to
 
+---
+
 ### TrafficManager
 #### Methods:
 - blockMove(Block)
 	- Description: when a block moves: (for curBlock in blocks)
 		- notifies the block if it is about to collide with curBlock (tell it the block it is about to collide with) aboutToCollideWith(curBlock)
 		- if curBlock.moveToBlock is the block that is moving,  then tell the block to ask for a new path
+
+---
 
 ### Obstacle
 #### Properties:
@@ -31,6 +42,8 @@
 - bottom (Number)
 - width (Number)
 - height (Number)
+
+---
 
 ### Block (extends Obstacle)
 #### Description:
@@ -48,7 +61,7 @@
 	- Description: Notifies trafficManager when it moves (every step)
 - aboutToCollideWith(Block)
  
-
+---
 
 - knows its final destination point
 - asks path-manager for coordinates to next point in path
