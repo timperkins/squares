@@ -1,7 +1,3 @@
-#Squares
-
----
-
 ### Node
 #### Properties:
 - x (Number)
