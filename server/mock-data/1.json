@@ -1,0 +1,31 @@
+{
+	"id": "1",
+	"title": "A Really Easy Trivia",
+	"questions": [{
+		"id": "abc",
+		"text": "What color starts with the letter \"b\"?",
+		"options": [{
+			"val": "Red"
+		}, {
+			"val": "Blue",
+			"correct": true
+		}, {
+			"val": "Green"
+		}, {
+			"val": "Yellow"
+		}]
+	}, {
+		"id": "jjj",
+		"text": "Who is the president of the United States?",
+		"options": [{
+			"val": "Santa"
+		}, {
+			"val": "Lebron James"
+		}, {
+			"val": "Frodo"
+		}, {
+			"val": "Obama",
+			"correct": true
+		}]
+	}]
+}

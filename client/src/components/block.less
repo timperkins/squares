@@ -1,0 +1,13 @@
+.block {
+	background: green;
+	position: absolute;
+	transition: transform 0.5s;
+	border-right: solid 2px red;
+	cursor: crosshair;
+	&.reset {
+		transition: none;
+	}
+	&.active {
+		background: orange;
+	}
+}
